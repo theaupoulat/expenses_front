@@ -1,0 +1,152 @@
+$violet: rgb(90, 70, 205);
+$light-grey: rgb(235, 235, 235);
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+.container {
+	background-color: $violet;
+	height: 100vh;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.moduleCard {
+	width: 400px;
+	background-color: white;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	margin-top: 30px;
+
+	height: min-content;
+	box-sizing: border-box;
+}
+
+.formStyle {
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.input {
+	display: block;
+	border: 1px solid grey;
+	margin: 0 15px 15px 15px;
+	padding: 10px;
+	border-radius: 7px;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.incorrectName {
+	border: 1px solid red;
+	input[type="text"]:focus,
+	textarea:focus {
+		box-shadow: 0 0 5px red;
+	}
+}
+
+input[type="text"]:focus,
+textarea:focus {
+	box-shadow: 0 0 5px $violet;
+}
+
+h1 {
+	color: $violet;
+	font-size: 45px;
+	font-weight: 100;
+	margin-bottom: 20px;
+}
+
+.submitButton {
+	background-color: $violet;
+	color: white;
+	padding: 15px 40px 15px 40px;
+	border-radius: 7px;
+}
+
+.expenseLine {
+	display: flex;
+	color: $violet;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding-left: 5px;
+	padding-right: 5px;
+	box-sizing: border-box;
+	p {
+		font-weight: 100;
+		font-size: 14px;
+		flex: 1;
+		padding: 15px 0;
+		&:nth-child(2) {
+			flex: 3;
+		}
+		&:nth-child(3) {
+			text-align: right;
+			font-size: 18px;
+			font-weight: 400;
+		}
+	}
+}
+
+.amountFormat {
+	font-size: 18px;
+}
+
+.expenseTableHead {
+	@extend .expenseLine;
+	padding: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	p {
+		font-weight: 500;
+		&:nth-child(3) {
+			text-align: left;
+			font-size: 14px;
+			font-weight: 500;
+		}
+	}
+}
+
+.totalLine {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	box-sizing: border-box;
+	color: $violet;
+	padding: 10px 5px 0 5px;
+}
+
+.userLine {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	color: $violet;
+	padding-left: 5px;
+	padding-right: 5px;
+	box-sizing: border-box;
+	p {
+		font-weight: 100;
+		font-size: 14px;
+		padding: 15px 0;
+	}
+}
+.inputErrorMessage {
+	color: red;
+	font-size: 14px;
+	align-self: flex-start;
+	margin: -10px 0 15px 0;
+	padding-left: 10px;
+}
