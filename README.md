@@ -4,6 +4,9 @@ https://expenses-frontend.herokuapp.com/
 
 (May have delay due to loading dynos)
 
+## API
+
+The app is powered by an API, live here (https://expenses-backend-theau.herokuapp.com/) code here (https://github.com/theaupoulat/expenses_back)
 
 ## Available Scripts
 
